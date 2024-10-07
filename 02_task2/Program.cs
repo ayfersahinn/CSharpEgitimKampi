@@ -135,6 +135,8 @@ namespace _02_task2
             //gender = char.Parse(Console.ReadLine());
             //Console.WriteLine("Seçilen cinsiyet: " + gender);
             #endregion
+
+
             Console.Read();
         }
     }
