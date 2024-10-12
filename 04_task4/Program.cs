@@ -82,6 +82,56 @@ namespace _04_task4
             //Console.WriteLine("toplam " + bacterium);
             #endregion
 
+            #region while loops
+            //int i = 1;
+            //while (i < 10)
+            //{
+            //    Console.WriteLine(i);
+            //    i++;
+            //}
+
+            //int i = 0;
+            //while(i<10)
+            //{
+            //    if (i % 3 == 0)
+            //    {
+            //        Console.WriteLine(i);
+            //    }
+            //    i++;
+            //}
+
+            //int i = 1;
+            //int sum = 0;
+            //while (i < 10)
+            //{
+            //    sum += i;
+            //    i++;
+            //}
+            //Console.WriteLine(sum);
+
+            #endregion
+
+            #region ex1
+            //Console.WriteLine("3 basamaklı sayı giriniz...");
+            //int num = int.Parse(Console.ReadLine());
+            //int ones, tens, hundreds;
+            //ones = num % 10;
+            //tens = (num % 100) / 10;
+            //hundreds = num / 100;
+            //Console.WriteLine(ones + " - " + tens + " - " + hundreds);
+            //Console.WriteLine(ones + tens + hundreds);
+
+            //Console.WriteLine("bir sayı giriniz...");
+            //int num = int.Parse(Console.ReadLine());
+            //int sum = 0;
+            //while (num != 0)
+            //{
+            //    sum += num%10;
+            //    num = num/10;
+            //}
+            //Console.WriteLine(sum);
+
+            #endregion
             Console.Read();
         }
     }
