@@ -47,19 +47,31 @@ namespace _10_task10
             #endregion
 
             #region listing products
+            //sqlConnection.Open();
+            //SqlCommand cmd = new SqlCommand("select *from products", sqlConnection);
+            //SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            //DataTable dt = new DataTable();
+            //adapter.Fill(dt);
+            //foreach (DataRow dr in dt.Rows)
+            //{
+            //    foreach(var item in dr.ItemArray)
+            //    {
+            //        Console.Write(item.ToString() + " ");
+            //    }
+            //    Console.WriteLine();
+            //}
+            //sqlConnection.Close();
+            #endregion
+
+            #region deleting product
+            int delID;
+            Console.Write("Silinecek ürünün id sini giriniz: ");
+            delID = int.Parse(Console.ReadLine());
             sqlConnection.Open();
-            SqlCommand cmd = new SqlCommand("select *from products", sqlConnection);
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            adapter.Fill(dt);
-            foreach (DataRow dr in dt.Rows)
-            {
-                foreach(var item in dr.ItemArray)
-                {
-                    Console.Write(item.ToString() + " ");
-                }
-                Console.WriteLine();
-            }
+            SqlCommand cmd = new SqlCommand("delete from products where ProductID = @pID", sqlConnection);
+            cmd.Parameters.AddWithValue("@pID",delID);
+            cmd.ExecuteNonQuery();
+            Console.WriteLine("Silme işlemi başarılı");
             sqlConnection.Close();
             #endregion
             Console.Read();
