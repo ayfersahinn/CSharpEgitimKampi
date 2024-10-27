@@ -64,15 +64,36 @@ namespace _10_task10
             #endregion
 
             #region deleting product
-            int delID;
-            Console.Write("Silinecek ürünün id sini giriniz: ");
-            delID = int.Parse(Console.ReadLine());
+            //int delID;
+            //Console.Write("Silinecek ürünün id sini giriniz: ");
+            //delID = int.Parse(Console.ReadLine());
+            //sqlConnection.Open();
+            //SqlCommand cmd = new SqlCommand("delete from products where ProductID = @pID", sqlConnection);
+            //cmd.Parameters.AddWithValue("@pID",delID);
+            //cmd.ExecuteNonQuery();
+            //Console.WriteLine("Silme işlemi başarılı");
+            //sqlConnection.Close();
+            #endregion
+
+            #region updating products features
             sqlConnection.Open();
-            SqlCommand cmd = new SqlCommand("delete from products where ProductID = @pID", sqlConnection);
-            cmd.Parameters.AddWithValue("@pID",delID);
+            int pID;
+            string pName;
+            decimal pPrice;
+            Console.Write("Güncellemek istediğiniz ürünün id sini giriniz: ");
+            pID = int.Parse(Console.ReadLine());
+            Console.Write("Ürün adını giriniz: ");
+            pName = Console.ReadLine();
+            Console.Write("Ürün fiyatını giriniz: ");
+            pPrice = decimal.Parse(Console.ReadLine());
+            SqlCommand cmd = new SqlCommand("update products set ProductName=@ProductName, ProductPrice=@ProductPrice  where ProductID = @pID", sqlConnection);
+            cmd.Parameters.AddWithValue("@ProductName",pName);
+            cmd.Parameters.AddWithValue("@ProductPrice",pPrice);
+            cmd.Parameters.AddWithValue("@pID",pID);
             cmd.ExecuteNonQuery();
-            Console.WriteLine("Silme işlemi başarılı");
+            Console.WriteLine("Ürün başarıyla güncellendi");
             sqlConnection.Close();
+
             #endregion
             Console.Read();
         }
