@@ -62,3 +62,10 @@ Murat Yücedağ'ın back-end web geliştirme alanında sıfırdan ileri seviyeye
 - Veri tabanına giriş
 - Crud işlemleri
 - Veri tabanındaki verileri ekrana yazdırma
+## 📌 Task-10
+- Kampın onuncu dersi
+#### 🗎 İşlenen Konular
+- Veri tabanında crud işlemleri detaylı olarak işlendi
+- Kategori ekleme 
+- Ürün ekleme, listeleme, silme ve güncelleme işlemleri yapıldı
+
