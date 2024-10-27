@@ -56,3 +56,9 @@ Murat Yücedağ'ın back-end web geliştirme alanında sıfırdan ileri seviyeye
 - Metotlara giriş
 - Geriye değer döndüren ve döndürmeyen metotlar
 - Parametreli ve parametresiz metotlar
+## 📌 Task-9
+- Kampın dokuzuncu dersi
+#### 🗎 İşlenen Konular
+- Veri tabanına giriş
+- Crud işlemleri
+- Veri tabanındaki verileri ekrana yazdırma
